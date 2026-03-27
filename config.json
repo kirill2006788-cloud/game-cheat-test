@@ -1,0 +1,67 @@
+{
+    "detection": {
+        "colors": [
+            {
+                "name": "orange_center",
+                "lower_hsv": [5, 130, 130],
+                "upper_hsv": [28, 255, 255],
+                "priority": 1,
+                "min_area": 10,
+                "max_area": 2000,
+                "min_circularity": 0.55
+            },
+            {
+                "name": "blue_ring",
+                "lower_hsv": [88, 160, 140],
+                "upper_hsv": [128, 255, 255],
+                "priority": 2,
+                "min_area": 80,
+                "max_area": 6000,
+                "min_circularity": 0.55
+            }
+        ],
+        "min_contour_area": 15,
+        "max_contour_area": 40000,
+        "min_aspect_ratio": 0.4,
+        "max_aspect_ratio": 2.5,
+        "min_circularity": 0.3,
+        "merge_distance": 60,
+        "ignore_top_px": 80,
+        "ignore_bottom_px": 220
+    },
+    "aimbot": {
+        "enabled": true,
+        "smoothing": 1.5,
+        "fov_radius": 500,
+        "aim_speed": 0.9,
+        "target_offset_y": 0,
+        "center_offset_y": 0,
+        "sensitivity": 1.0,
+        "activation_key": "shift"
+    },
+    "triggerbot": {
+        "enabled": true,
+        "delay_ms": 25,
+        "threshold_px": 25,
+        "activation_key": "alt"
+    },
+    "esp": {
+        "enabled": true,
+        "draw_boxes": true,
+        "draw_crosshair": true,
+        "box_color": [0, 255, 0],
+        "crosshair_color": [0, 0, 255],
+        "crosshair_size": 20
+    },
+    "capture": {
+        "region": null,
+        "monitor_index": 1,
+        "fps_limit": 0
+    },
+    "hotkeys": {
+        "toggle_aimbot": "f1",
+        "toggle_esp": "f2",
+        "toggle_triggerbot": "f3",
+        "exit": "f10"
+    }
+}
