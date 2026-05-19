@@ -1,7 +1,7 @@
 # 🎮 game-cheat-test
 
 <p align="center">
-  <b>Game Cheat / Hack Testing Project</b>
+  <b>Game Security Research • Cheat Detection</b>
 </p>
 
 <p align="center">
@@ -13,6 +13,8 @@
 
 > Educational project for game security research and cheat detection.
 
+> **Public portfolio version:** research approach + detection patterns.
+
 ---
 
 ## ⚠️ Purpose
@@ -22,29 +24,28 @@ This project is for **educational purposes only**:
 - Learning cheat detection techniques
 - Researching anti-cheat systems
 
-**This project does NOT include actual cheats or hacks.**
+**This project does NOT include actual cheats or exploits.**
+
+---
+
+## ✨ What This Project Demonstrates
+
+- 🔒 **Game security** fundamentals
+- 🎯 **Cheat detection** patterns
+- 🛡️ **Anti-cheat** approaches
+- 📊 **Memory analysis** techniques
+- 🔍 **Packet analysis** methods
 
 ---
 
 ## 🛠 Tech Stack
+
 
 | Component | Technology |
 |-----------|------------|
 | **Language** | Python 3.11+ |
 | **Focus** | Game security research |
 | **Testing** | pytest |
-
----
-
-## 📂 Project Structure
-
-```
-game-cheat-test/
-├── src/                  # Source code
-├── tests/                # Tests
-├── docs/                 # Documentation
-└── README.md
-```
 
 ---
 
