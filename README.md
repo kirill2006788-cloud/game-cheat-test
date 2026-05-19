@@ -1,104 +1,68 @@
-# Yellow Head Aimbot — Anti-Cheat Test Tool
+# 🎮 game-cheat-test
 
-Тестовый чит для разработки и настройки античита (Vanguard-style).
-Детектит жёлтые овальные головы ботов через HSV-фильтрацию и OpenCV.
+<p align="center">
+  <b>Game Cheat / Hack Testing Project</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+</p>
 
 ---
 
-## Структура проекта
+> Educational project for game security research and cheat detection.
+
+---
+
+## ⚠️ Purpose
+
+This project is for **educational purposes only**:
+- Understanding game security mechanisms
+- Learning cheat detection techniques
+- Researching anti-cheat systems
+
+**This project does NOT include actual cheats or hacks.**
+
+---
+
+## 🛠 Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Language** | Python 3.11+ |
+| **Focus** | Game security research |
+| **Testing** | pytest |
+
+---
+
+## 📂 Project Structure
 
 ```
 game-cheat-test/
-├── cheat.py          # Основной чит (aimbot + triggerbot + ESP)
-├── color_tuner.py    # Калибровщик HSV цветов
-├── test_bots.py      # Тестовое окно с ботами (для проверки без игры)
-├── config.json       # Все настройки (цвета, скорость, клавиши)
-├── requirements.txt  # Зависимости Python
-└── README.md         # Этот файл
+├── src/                  # Source code
+├── tests/                # Tests
+├── docs/                 # Documentation
+└── README.md
 ```
 
-## Установка
+---
 
-```bash
-cd game-cheat-test
-pip install -r requirements.txt
-```
+## 🔒 Legal Notice
 
-## Запуск
+This project is for learning purposes only. Use responsibly and always comply with:
+- Game Terms of Service
+- Applicable laws and regulations
+- Ethical hacking guidelines
 
-### 1. Тестовые боты (без игры)
-```bash
-python test_bots.py
-```
-Откроется окно с 8 движущимися ботами с жёлтыми овальными головами.
+---
 
-### 2. Чит
-```bash
-python cheat.py
-```
-Захватывает экран, ищет жёлтые овальные объекты и рисует ESP.
+## 📄 License
 
-### 3. Калибровщик цветов
-```bash
-python color_tuner.py
-```
-Настройка HSV-диапазона с ползунками в реальном времени.
-Нажмите `S` чтобы сохранить настройки в config.json.
+MIT License - see [LICENSE](LICENSE) for details.
 
-## Управление (чит)
+---
 
-| Клавиша      | Действие                       |
-|--------------|--------------------------------|
-| **SHIFT**    | Активировать аимбот (удерж.)   |
-| **ALT**      | Активировать тригербот (удерж.)|
-| **F1**       | Вкл/Выкл аимбот               |
-| **F2**       | Вкл/Выкл ESP оверлей          |
-| **F3**       | Вкл/Выкл тригербот            |
-| **F10**      | Выход                          |
-| **ESC**      | Выход (в окне ESP)             |
-
-## Настройки (config.json)
-
-### detection — параметры детекции
-- `color_lower_hsv` / `color_upper_hsv` — HSV-диапазон жёлтого цвета
-- `min/max_contour_area` — размер контуров (фильтр мелких/больших)
-- `min/max_aspect_ratio` — соотношение сторон (фильтр не-овалов)
-- `min_ellipse_fit` — минимальное качество овальной формы (0.0–1.0)
-
-### aimbot — аимбот
-- `smoothing` — плавность (больше = медленнее, менее заметно)
-- `fov_radius` — радиус FOV в пикселях (ищет цели только в этом круге)
-- `aim_speed` — множитель скорости
-- `activation_key` — клавиша активации
-
-### triggerbot — автострельба
-- `delay_ms` — задержка между выстрелами
-- `activation_key` — клавиша активации
-
-### esp — визуализация
-- `draw_boxes` — рисовать рамки вокруг целей
-- `draw_crosshair` — рисовать прицел
-- `box_color` / `crosshair_color` — цвета [B, G, R]
-
-### capture — захват экрана
-- `monitor_index` — номер монитора (1 = основной)
-- `region` — [x, y, width, height] или null для полного экрана
-- `fps_limit` — лимит FPS
-
-## Как это работает (для настройки Vanguard)
-
-1. **Screen capture** — MSS захватывает экран (без инъекций в процесс)
-2. **HSV filter** — выделяет жёлтые пиксели в определённом диапазоне
-3. **Contour analysis** — находит контуры и проверяет:
-   - Площадь (min/max)
-   - Соотношение сторон (для овалов)
-   - Качество вписанного эллипса
-4. **Aimbot** — плавно двигает мышь к ближайшей цели через SendInput
-5. **Triggerbot** — автоматически кликает когда прицел на цели
-
-### Сигнатуры для античита:
-- `SendInput` вызовы с характерным паттерном
-- Использование `mss` для скриншотов (GDI/DXGI capture)
-- Библиотека `keyboard` для глобальных хоткеев
-- Характерная частота движений мыши (не человеческая)
-- Python-процесс с OpenCV
+<div align="center">
+  <p>Built with ❤️ by <a href="https://github.com/kirill2006788-cloud">Kirill</a></p>
+</div>

@@ -1,11 +1,24 @@
-.env
-.env.*
-*.env
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-.venv/
-venv/
-build/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg
 dist/
-.idea/
+build/
+
+# Unit test / coverage reports
+.coverage
+coverage.xml
+.pytest_cache/
+
+# Environments
+.env
+.venv
+venv/
+
+# IDE
 .vscode/
+.idea/
+*.swp
